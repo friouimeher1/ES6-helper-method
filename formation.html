@@ -1,0 +1,106 @@
+<html>
+  <body>
+    <h1>*formation</h1>
+  </body>
+  <script>
+    const a=[12,3,4,5,6,7,8,9]
+    console.log('********************Spread For Arrays********************')
+    let newArrays=[1,2,3,3,4,5,6]
+    let newA =[...a,...newArrays,100]
+    console.log(newA)
+    let object ={
+    'name':'frioui',
+    age:20
+    }
+    let newObject={
+      position:"Engineering"
+    }
+    let k={
+      ...newObject,
+      ...object,
+      lastName:'Meher'
+    }
+    console.log('---------------------Spread For Object------------------------')
+    console.log(k)
+    console.log('======================Rest=====================================')
+      Filter=(...args)=>{
+      return args.filter(e=>{
+        return e>1
+      })
+    }
+    console.log(Filter(...newA))
+    console.log('-------------------->Destructuring-------------------------------')
+    const [z,b,...c]=newA
+    console.log(`Z  = ${z},B = ${b},C = ${c}`)
+    const objectA={
+      name:'FRIOUI',
+      lastName:'Meher'
+    }
+    const { name,lastName } =objectA
+    console.log(`name is ${name} and last Name is ${lastName}`)
+    console.log('*******************Primitive and Reference Type*******************************')
+
+    const person ={
+      name:'FRIOUI'
+    }
+    const newperson={
+      ...person
+    }
+    person.name='Meher'
+    console.log(`The new person is ${newperson.name}`)
+  console.log('__________________________Arrow Function___________________________________________')
+  const mappingData =(...args)=>{
+    return  args.map((e)=>{
+      return  e
+    })
+  }
+  const ArraysData=[1,2,3,4,5,6,7,8,9]
+  console.log(mappingData(...ArraysData))
+console.log('Filtering Data')
+  const filteringData=(...args)=>{
+    return args.filter((e)=>e>3)
+  }
+  console.log(filteringData(...ArraysData))
+console.log('Findinf Data')
+  const findingData=(...args)=>{
+    return args.find((e)=>e>2)
+  }
+  console.log(findingData(...ArraysData))
+  console.log('every Data')
+  const everyData =(...args)=>{
+    return args.every((e)=>e>0)
+  }
+console.log(everyData(...ArraysData))
+console.log('Some Data')
+const someData=(...args)=>{
+  return args.some((e)=>e>1)
+}
+console.log(someData(...ArraysData))
+console.log('Reducing Data')
+const reducingData=(...args)=>{
+  return args.reduce((s,e)=>{
+   return  s+e
+  },0)
+}
+console.log(reducingData(...ArraysData))
+console.log('using For to loop throught this arrays')
+const foreachingData=(...args)=>{
+  let i
+  for(i=0;i<args.length;i++){
+    console.log(args[i])
+  }
+}
+console.log(foreachingData(...ArraysData))
+console.log('using forEach to loop throught this Data Arrays')
+const forEachinData=(...args)=>{
+  let s=0
+   args.forEach((e)=>s+=e)
+   return s
+}
+console.log(forEachinData(...ArraysData))
+let a1=prompt('Please enter value 1')
+let a2=prompt('Please enter value 2')
+let message =(Number(a1)>Number(a2))? `${a1} larger than ${a2}`:`${a1} smaller than ${a2}`
+alert(message)
+  </script>
+</html>
