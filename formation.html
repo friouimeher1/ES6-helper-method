@@ -98,9 +98,54 @@ const forEachinData=(...args)=>{
    return s
 }
 console.log(forEachinData(...ArraysData))
-let a1=prompt('Please enter value 1')
-let a2=prompt('Please enter value 2')
-let message =(Number(a1)>Number(a2))? `${a1} larger than ${a2}`:`${a1} smaller than ${a2}`
-alert(message)
+
+  // let a1=prompt('Please enter value 1')
+  // let a2=prompt('Please enter value 2')
+  // let message =(Number(a1)>Number(a2))? `${a1} larger than ${a2}`:`${a1} smaller than ${a2}`
+  // alert(message)
+console.log('----------------------------check id the data is arrays----------------------------')
+ const studentData=[
+   'FRIOUI',
+   'Meher',
+   'Engineering'
+ ]
+ console.log(typeof(studentData))
+
+ console.log(Array.isArray(studentData))
+
+ const studentObject={
+   name:'FIRIOUI',
+   lastName:'Meher'
+ }
+ console.log(typeof(studentObject))
+ const animal =['cat','dog','rabbit','lion']
+ const index=Math.floor(Math.random()*animal.length
+ )
+ console.log(`the animal is ${animal[index]} and it postion in ${index}`)
+ const listAnimal =[
+   'Rabbit',
+   'Horse',
+   'Sheep',
+   'Cat',
+   'Zebra',
+   'Fesh'
+ ]
+ console.log(listAnimal)
+ console.log('//////////////////Add New Animal at the end of the arrays////////////////////')
+ listAnimal.push('Dog')
+ console.log(listAnimal)
+ console.log('####################Add new Animal to the first arrays #######################')
+ listAnimal.unshift('Lion')
+ console.log(listAnimal)
+console.log('~~~~~~~~~~~~~~~~~~~~~ delete animal at the end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+listAnimal.pop()
+console.log(listAnimal)
+console.log('+++++++++++++++++++++delete the first animal in the arrays+++++++++++++++++++++++')
+listAnimal.shift()
+console.log(listAnimal) 
+console.log('====================reverse the data arrays=======================================')
+console.log(listAnimal.reverse())
+console.log('&&&&&&&&&&&&&&&&&&&& sort data aarrays &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+console.log(listAnimal.sort())
   </script>
 </html>
