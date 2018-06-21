@@ -159,7 +159,7 @@ console.log('List of built-in method to get item from arrays')
 console.log(`Using Method IndexOf`)
 const finIndex =listAnimal.indexOf('Cat')
 console.log(`the index number of ${listAnimal[finIndex]} is ${finIndex}`)
-const animalData=prompt('Please give me anima')
+const animalData=prompt('Please give me animal')
 const indexFind =listAnimal.indexOf(animalData)
 console.log(indexFind)
 indexFind ===-1 ?
@@ -185,5 +185,31 @@ multi.forEach((e)=>{
     console.log(e[i])
   }
 })
+console.log('---------------------Learning Object -----------------------------------------')
+let obj={
+  key:'Frioui',
+  value:'Meher'
+}
+console.log('Object',obj)
+console.log('*********************Create Object*******************************************')
+const objtPerson =new Object()
+objtPerson.name='FRIOUI'
+objtPerson.lastName='Meher'
+console.log(objtPerson)
+console.log('----------------------- Retrive Data from Object ----------------------------')
+console.log(objtPerson.name)
+console.log("Or")
+console.log(objtPerson[`name`])
+const prop='Red'
+console.log(objtPerson[prop])
+console.log('----------------------------Update Object -----------------------------------')
+objtPerson.name="Engineering"
+console.log(objtPerson)
+const bool = delete objtPerson.name
+bool?alert('is deleted'):alert('not deleted')
+console.log(objtPerson)
+console.log('-------------------------- Loop Object ----------------------------------------')
+
+
   </script>
 </html>
