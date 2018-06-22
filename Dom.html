@@ -1,0 +1,28 @@
+<html>
+  <div id="output" ></div> <br>
+  <input type="text" id="txt"/>
+  <br>
+    <script>
+        console.log('--------------DOM: Document Object Model -----------------')
+          console.log(` DOM : its use for exemple retrieve a specific  information from your web page`)
+          console.dir(document)
+          console.log('********** connect javascript to html page you can apply ,you create event a lot morve thing you can do with DOM styling******************************')
+          console.dir(document.URL)
+          console.log('--------------------- interact with the dom ----------------------------')
+          document.write('Hi Everyone Javascript is nice !')
+          const output =document.getElementById('output')
+        // console.log(output)
+        output.innerHTML ="<h1>Engineering is the best thing in this life </h1>";
+        console.log('--------------- how to get value from input -------------')
+        let a =document.getElementById('txt')
+        console.dir(a)
+        console.log('----------to know the type of the input ----------')
+        console.log(a.nodeName)
+        console.log('-----------to get the value from the input text')
+        let b=a.value
+        output.innerHTML=b
+        console.log('------------- using prompt to update the Dom ------ ')
+        var userName  =prompt('Please give me you full Name ')
+        output.innerHTML=userName
+             </script>
+</html>

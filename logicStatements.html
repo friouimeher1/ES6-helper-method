@@ -1,0 +1,13 @@
+<html>
+  <div id="output"></div>
+  <script>
+    console.log('------------- apply logic statement ------------')
+    const a=prompt('give me number one')
+    const b=prompt('give me number two')
+    let out =""
+    const output =document.getElementById("output")
+    a > b ? out = (`${a} > ${b}`) : out =(`${b} > ${a}`)
+    output.innerHTML =`<h1> ${out} </h1>`
+    
+  </script>
+</html>
