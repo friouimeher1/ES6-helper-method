@@ -1,5 +1,7 @@
 <html>
   <div id="output"></div>
+  <div id="outputData"></div>
+  <div id="datatime"></div>
   <script>
     console.log('------------- apply logic statement ------------')
     const a=prompt('give me number one')
@@ -8,6 +10,22 @@
     const output =document.getElementById("output")
     a > b ? out = (`${a} > ${b}`) : out =(`${b} > ${a}`)
     output.innerHTML =`<h1> ${out} </h1>`
+    const  array =['frioui','computer','engineer']
+    const name=prompt('give me name')
+    let indexFindeName=array.indexOf(name)
+    let o = ''
+    indexFindeName !== -1 ? o=`Welcome <strong> ${name} </strong>` : o=` Sorry <h3>${name}</h3> is not exist`
+    const outputData =document.getElementById('outputData')
+    outputData.innerHTML=o
+    const time =prompt('give me time')
+    const dataTime=Number(time)
+    const datatime =document.getElementById('datatime')
+    switch(dataTime){
+    case 1:datatime.innerHTML=` <h1> this time for sleep`
+    break
+    case 8:datatime.innerHTML=` <h1> this time for morring`
     
-  </script>
+    case 8:datatime.innerHTML=` <h1> this time for lunch hhhhhhhhh`
+    }
+      </script>
 </html>

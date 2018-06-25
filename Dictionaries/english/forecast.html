@@ -1,0 +1,75 @@
+<html>
+  <div id='output'></div>
+  <script >
+  const output=document.getElementById('output')
+  let forecast=[
+    'cold',
+    'hot',
+    'good',
+    'warm',
+    'humid',
+    'snow',
+    'raining',
+    'stormy',
+    'icy',
+    'windy',
+    'misty'
+  ]
+  for (fore of forecast){
+    output.innerHTML +=`<h1>${fore}</h1>`
+  }
+  let listDay =[
+    {0:'Sunday'},
+    {1:'Monday'},
+    {2:'Tuesday'},
+    {3:'Wednesday'},
+    {4:'Thursday'},
+    {5:'Friday'},
+    {6:'Saturday'}
+  ]
+  for(day in listDay){    
+   output.innerHTML +=`<h1>${listDay[day][day]}</h1>`
+  }
+  const number=[
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+    'teen'
+  ]
+  let d=0
+  while(d<number.length){
+    output.innerHTML +=`<strong>${number[d]} <br></strong>`
+    d++
+  }
+  const number_10=[
+    'eleven',
+    'twelve',
+    'thirteen',
+    'fourteen',
+    'fifteen',
+    'sixteen',
+    'seventeen',
+    'eighteen',
+    'nineteen',
+    'twenty'
+  ]
+  for(let number=number_10.length-1;number>=0;number--){
+    output.innerHTML +=`<h3>${number_10[number]}</h3>`
+  }
+  const situation={
+    s1:'single',
+    s2:'married',
+    s3:'divorced',
+    s4:'widowed'
+  }
+  for(status in situation){
+    output.innerHTML +=`<h3> ${status} = ${situation[status]}`
+  }
+  </script>
+</html>
