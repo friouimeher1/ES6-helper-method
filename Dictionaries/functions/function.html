@@ -1,9 +1,89 @@
 <html>
   <div id="output"></div>
+  <input type="button" value="Click Me" onclick="resultFunction()"><br>
+  <input type="button" value="Addition" onclick="calculAdd()">
+  
+  <input type="text" id='num1'>
+  <input type="text" id='num2'>
   <script>
-    myFunction =()=>{
-      alert("Hello")
+    const output =document.getElementById('output')
+
+    myFunction =(msg)=>{
+      return msg
     }
-    myFunction()
+    output.innerHTML +=myFunction('Hello Engineering')
+    allDay=(...day)=>{
+      return day.map((d)=>{
+        return d
+      })
+    }
+    output.innerHTML +=`<h5>${allDay(['one','two','three','four'])}<h5/>`
+      resultFunction=()=>{
+        let a=0
+        let b=0
+        a=prompt('Value One')
+        b=prompt('Value Two')
+       
+      }
+
+calculAdd =()=>{ 
+    let a=document.getElementById('num1').value
+    let b=document.getElementById('num2').value
+    if(isNaN(a)){
+      alert(`${a}  is not a number`)
+    }
+    else if(isNaN(b))
+    {
+      alert(`${b}  is not a number`)
+    }
+      else if (a.length ==0 && b.length ==0){
+      alert(`Please enter the two value`)
+    }
+    else if(a.length ==0){
+      alert(`Please enter the value 1`)
+    }
+    else if(b.length ==0){
+      alert(`Please enter the value 2`)
+    }
+  else{
+    let s=0
+    s=Number(a) + Number(b)
+        let m=Number(a)-Number(b)
+        let multi=Number(a)*Number(b)
+        let div=Number(a)/Number(b)
+        output.innerHTML +=`<h1>Addition : ${s}</h1>`
+        output.innerHTML +=`<h1>Minus : ${m}</h1>`
+        output.innerHTML +=`<h1>Multiply :${multi}</h1>`
+        output.innerHTML +=`<h1>Division : ${div}</h1>`
+  }
+}
+
+defaultFunction=(a,b)=>{
+  console.log(checkArrays() ) 
+}
+
+checkArrays=()=>{
+  let count =0
+
+  const tab1=[1,2,3,4,3]
+  const tab2=[1,2,5,6,3]
+ if(tab1.length !==tab2.length )
+  {
+     alert(`the length of the table 1 is ${tab1.length} but the length of the table two is ${tab2.length}` )
+  }
+    else{
+      let j=0
+      for(let i=0;i<=tab1.length;i++){
+     if(tab1[i] === tab2[j]){
+          count ++
+          j++
+     } 
+     j++     
+    }
+     
+    }
+    return count
+}
+defaultFunction()
   </script>
 </html>

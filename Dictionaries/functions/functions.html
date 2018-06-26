@@ -1,0 +1,57 @@
+<html>
+  <script>
+    dataHandle=(tab,filter)=>{
+      let tab2=[]
+      let tab3=[]
+      for(let i=0;i<=tab1.length;i++){
+        if(filter(tab[i])){
+          tab2.push(tab1[i])
+        }else{
+          tab3.push(tab1[i])
+        }
+      }
+      return `
+              List even= [ ${tab2} ] 
+              List odd = [${tab3}]
+              `
+    }
+    check=(a)=>{      
+      if(a % 2==0){
+        return true
+      }else{
+        return false
+      }
+    }
+    const tab1=[1,2,3,4,5,6,7,8,9]
+    console.log(dataHandle(tab1,check))
+    printFunction=(tab,handle)=>{
+      for(let i=0;i<=tab.length;i++){     
+      handle(tab[i])
+      }    
+    }
+   handlePrint=(a)=>{
+     if(!(a===undefined)){
+     console.log(`${a} `)
+     }
+   }
+  console.log(printFunction(tab1,handlePrint))
+  const x = handleFilterData=()=>{
+    return 5
+  }
+  console.log('x = ',x(),typeof(x))
+  sayHello=()=>{
+    return ()=>{
+      console.log('Hello World !')
+    }
+  }
+  console.log(sayHello()())
+  var closures="Global Scope"
+  handleClosures=()=>{
+    return handleLocalScope=()=>{
+      return closures
+    }
+    return handleLocalScope()
+  }
+  console.log(handleClosures()())
+  </script>
+</html>
